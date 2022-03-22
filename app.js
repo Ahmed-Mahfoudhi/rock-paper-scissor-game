@@ -16,7 +16,7 @@ possibleChoices.forEach(possibleChoice => {
     possibleChoice.addEventListener('click', e => {
         userChoice = e.target.id;
         userChoiceDisplay.innerHTML = userChoice;
-        computerChoice = generateChoice(['paper','rock','scissor']);
+        computerChoice = generateChoice(['paper','rock','scissors']);
         computerChoiceDisplay.innerHTML = computerChoice;
         result = interpretSituation(computerChoice,userChoice);
         resultDisplay.innerHTML = result;
@@ -53,7 +53,7 @@ function interpretSituation(computerChoice,userChoice){
                         color = loseColor;
                         return lose;
                     }
-        case 'scissor' : if(computerChoice === 'rock') {
+        case 'scissors' : if(computerChoice === 'rock') {
                             color = loseColor;
                             return lose;
                         }else{
